@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>사용자 등록 Test Page</title>
+    <link rel = "stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+<div class = "container text-center">
+    <div>
+        <h1>사용자 등록 - 회원가입</h1>
+    </div>
+    <div>
+        <form th:action = "@{/process_register}" method="post"
+              style="max-width: 600px; magin: 0 auto;"
+              th:object = "${user}">
+            <div class="m-3">
+                <div class="form-group row">
+                    <label class="col-form-label col-4">이름</label>
+                    <div class ="col-8">
+                        <input type="text" class="form-control" th:field="*{name}"
+                               required minlength="1" maxlength="10"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-4">E-mail</label>
+                    <div class="col-8">
+                        <input type="email" class="form-control" th:field="*{email}"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-4">비밀번호</label>
+                    <div class ="col-8">
+                        <input type="password" class="form-control" th:field="*{password}" required
+                        minlength="6" maxlength="20"/>
+                    </div>
+                </div>
+
+                <div>
+                    <button type = "submit" class="btn btn-primary">등록</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+</body>
+</html>

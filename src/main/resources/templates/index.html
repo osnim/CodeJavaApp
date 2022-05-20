@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>카페 분류 앱 서비스 Test Page</title>
+    <link rel = "stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div class = "container text-center">
+        <div>
+            <h1>카페 분류 앱 서비스에 오신 것을 환영합니다.</h1>
+        </div>
+        <div>
+            <h3><a th:href = "@{/list_users}">회원 목록</a></h3>
+            <h3><a th:href="@{/register}">사용자 등록</a></h3>
+            <h3><a th:href="@{/login}">로그인</a></h3>
+        </div>
+
+    </div>
+</body>
+</html>
